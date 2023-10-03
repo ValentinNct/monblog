@@ -1,4 +1,4 @@
-/* Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
+#/* Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
    (min-height) sur un bloc, il faut que son parent direct ait lui-même une
    hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
    pixels, em, autres unités...).
@@ -12,8 +12,8 @@ html, body {
 }
 
 body {
-    color: #bfbfbf;
-    background: black;
+    color: white;
+    background: #FFE4C4;
     font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
 }
 

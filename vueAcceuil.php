@@ -3,11 +3,11 @@
 ?>
 <article>
 	<header>
-		<h1> class="tritreBillet"><?=$billet['titre'] ?></h1>
+		<h1 class="titreBillet"><?=$billet['titre'] ?></h1>
 		<time><?= $billet['date'] ?></time>
-	</hearde>
+	</hearder>
 	<p><?= $billet['contenu'] ?></p>
-	<em><a href="#">Commentaire</a></em>
+	<em><a href="#">Commentaires</a></em>
 </article>
 <hr />
 <?php endforeach;

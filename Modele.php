@@ -1,7 +1,7 @@
-<?php 
+<?php
 	function getBdD(){
-		$bdd = new PDO('mysql:host=localhost;dbname=monblog;charset=utf8','root', '',
-							array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+		$bdd = new PDO('mysql:host=localhost;dbname=monblog;charset=utf8','root','',
+					array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		return $bdd;
 	}
 
@@ -12,4 +12,18 @@
                 	        . ' order by idBillet desc');
 		return $billets;
 	}
-?>
+
+	function getBillet($idBillet){
+		$bdd = getBdD();
+		$billet = $bdd->prepare('select * from billet WHERE idBillet=:id');
+		$billet->bindParam(':id', $idBillet);
+		$billet->execute();
+		return $billet->fetch(PDO::FETCH_ASSOC);
+	}
+
+	function getCommentaires($idBillet){
+		$bdd = getBdD();
+		$com = $bdd->query('select * from commentaire where idBillet='. $idBillet);
+		return $com;
+	}
+

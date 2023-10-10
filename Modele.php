@@ -21,7 +21,7 @@
 		return $billet->fetch(PDO::FETCH_ASSOC);
 	}
 
-	function getCommentaires(){
+	function getCommentaires($idBillet){
 		$bdd = getBdD();
 		$com = $bdd->query('select * from commentaire where idBillet='. $idBillet);
 		return $com;

@@ -12,7 +12,7 @@
                 <p>Je vous souhaite la bienvenue sur ce modeste blog.</p>
             </header>
 	    <div id="contenu">
-                 <p><?php include $contenu ?></p>
+                 <?php include $contenu ?>
 	    </div> <!-- #contenu -->
             <footer id="piedBlog">
                 Blog réalisé avec PHP, HTML5 et CSS.

@@ -1,6 +1,6 @@
 <?php
 	function getBdD(){
-		$bdd = new PDO('mysql:host=localhost;dbname=monblog;charset=utf8','root','',
+		$bdd = new PDO('mysql:host=localhost;dbname=monblog;charset=utf8','utilblog','1234',
 					array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		return $bdd;
 	}

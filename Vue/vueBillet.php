@@ -11,3 +11,5 @@
 	?>
 </article>
 <hr />
+
+<?php require 'vueCommentaire.php'; ?>

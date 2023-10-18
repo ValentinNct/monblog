@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require 'Controleur/Controleur.php';
 
     try{
@@ -27,5 +28,6 @@
     }catch (Exception $e){
         erreur($e->getMessage());
     }
+    session_destroy();
 ?>
 

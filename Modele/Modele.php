@@ -27,3 +27,8 @@
 		return $com;
 	}
 
+	function ajoutCommentaire(){
+		$bdd = getBdD();
+		$ajoutCom = $bdd->query('insert into commentaire (dateCommentaire, auteurCommentaire, contenuCommentaire, idbillet) values (NOW(),"'.$_SESSION['auteurCom'].'","'.$_SESSION['contenuCom'].'","'.$_GET['id'].'")');
+		return $ajoutCom;
+	}
